@@ -1,6 +1,6 @@
 programa {
   funcao inicio() {
-    inteiro vet[5] , i , n
+    inteiro vet[5] , i , n , val = 0 , pos
 
     para(i = 0; i < 5; i++){
       escreva("Digite um valor: ")
@@ -12,11 +12,18 @@ programa {
 
     para(i = 0; i < 5; i++){
       se(n == vet[i]){
-        escreva("Esse número está no vetor e está na posição " , i , "\n")
-      }senao{
-        escreva("Esse número não está no vetor\n")
+        val += 1
+        pos = i
+        }
+      
       }
+    se(val > 0){
+        escreva("O número está no vetor e está na posição " , pos)
+      }senao{
+        escreva("O número não está no vetor")
     }
+    
+    
     
   }
 }

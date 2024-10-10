@@ -1,6 +1,6 @@
 programa {
   funcao inicio() {
-    inteiro mat[3][3] , i , j , n
+    inteiro mat[3][3] , i , j , n , val = 0 , l , c
 
     para(i = 0; i < 3; i++){
       para(j = 0; j < 3; j++){
@@ -22,11 +22,16 @@ programa {
     para(i = 0; i < 3; i++){
       para(j = 0; j < 3; j++){
         se(n == mat[i][j]){
-          escreva("O valor está na matriz e está na linha " , i , " e na coluna " , j , "\n")
-        }senao{
-          escreva("O valor não está na matriz\n")
+          val += 1
+          l = i
+          c = j
         }
       }
+    }
+    se(val > 0){
+      escreva("O valor está na matriz e está na linha " , l , " e na coluna " , c , "\n")
+    }senao{
+      escreva("O valor não está na matriz")
     }
   
   }
